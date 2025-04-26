@@ -1,9 +1,6 @@
 package com.edu;
 
-import com.edu.algorithms.BubbleSort;
-import com.edu.algorithms.InsertionSort;
-import com.edu.algorithms.QuickSort;
-import com.edu.algorithms.SortAlgorithm;
+import com.edu.algorithms.*;
 import javafx.application.Application;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -49,7 +46,7 @@ public class SortingVisualizerApp extends Application {
         root.setBottom(controlsWrapper);
 
         Scene scene = new Scene(root, NUM_BARS * (BAR_WIDTH + BAR_SPACING), MAX_HEIGHT + 100);
-        scene.getStylesheets().add(getClass().getResource("/darcula.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setTitle("Sorting Visualizer");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -87,7 +84,7 @@ public class SortingVisualizerApp extends Application {
 
     private ComboBox<SortAlgorithm> createAlgorithmSelector() {
         ComboBox<SortAlgorithm> algorithmSelector = new ComboBox<>();
-        algorithmSelector.getItems().addAll(new BubbleSort(), new InsertionSort(), new QuickSort());
+        algorithmSelector.getItems().addAll(new BubbleSort(), new InsertionSort(), new QuickSort(), new MergeSort(), new SelectionSort());
         algorithmSelector.getSelectionModel().selectFirst();
         algorithmSelector.setStyle("-fx-background-color: #fff;");
         selectedAlgorithm = algorithmSelector.getValue();
