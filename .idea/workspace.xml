@@ -7,6 +7,8 @@
     <list default="true" id="1e6994bd-5a14-4b01-8c2f-b7d8eceb38ee" name="Changes" comment="updated pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/SortingVisualizerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edu/SortingVisualizerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/algorithms/MergeSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/algorithms/SelectionSort.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +36,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.SortingVisualizerApp.executor": "Run",
+    "Maven.algorithms [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "Maven.arrays-edu [org.openjfx:javafx-maven-plugin:0.0.8:jlink].executor": "Run",
     "Maven.arrays-edu [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/geniy/algorithm-visualizer",
+    "last_opened_file_path": "C:/Users/geniy/Java_WorkWithAlgorithms",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
