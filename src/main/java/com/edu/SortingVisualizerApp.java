@@ -84,7 +84,7 @@ public class SortingVisualizerApp extends Application {
 
     private ComboBox<SortAlgorithm> createAlgorithmSelector() {
         ComboBox<SortAlgorithm> algorithmSelector = new ComboBox<>();
-        algorithmSelector.getItems().addAll(new InsertionSort(), new QuickSort(), new BubbleSort());
+        algorithmSelector.getItems().addAll(new InsertionSort(), new QuickSort(), new BubbleSort(), new MergeSort(), new SelectionSort());
         algorithmSelector.getSelectionModel().selectFirst();
         algorithmSelector.setStyle("-fx-background-color: #fff;");
         selectedAlgorithm = algorithmSelector.getValue();

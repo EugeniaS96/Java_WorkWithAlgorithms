@@ -6,41 +6,44 @@ import javafx.scene.shape.Rectangle;
 public class BubbleSort implements SortAlgorithm {
 
     private int operationCount = 0;
-    private int currentIndex = 0;
+    private int pass = 0;
+    private int index = 0;
+    private boolean swapped = false;
 
     @Override
     public boolean sortStep(Rectangle[] bars, boolean stepByStep) {
-        if (currentIndex >= bars.length - 1) {
+        int n = bars.length;
+        if (pass >= n - 1) {
             return true;
         }
-
-        boolean swapped = false;
-
-        for (int j = 0; j < bars.length - 1 - currentIndex; j++) {
-            if (bars[j].getHeight() > bars[j + 1].getHeight()) {
-                Utility.highlightBars(bars, j, j + 1);
-                double tempHeight = bars[j].getHeight();
-                bars[j].setHeight(bars[j + 1].getHeight());
-                bars[j + 1].setHeight(tempHeight);
-
+        if (index < n - 1 - pass) {
+            Utility.highlightBars(bars, index, index + 1);
+            operationCount++;
+            if (bars[index].getHeight() > bars[index + 1].getHeight()) {
+                double tmp = bars[index].getHeight();
+                bars[index].setHeight(bars[index + 1].getHeight());
+                bars[index + 1].setHeight(tmp);
                 swapped = true;
             }
-
-            operationCount++;
-
-            if (stepByStep) {
-                return false;
-            }
+            index++;
+            return false;
         }
 
-        currentIndex++;
-        return !swapped;
+        if (!swapped) {
+            return true;
+        }
+        pass++;
+        index = 0;
+        swapped = false;
+        return false;
     }
 
     @Override
     public void reset() {
-        currentIndex = 0;
-        resetOperationCount();
+        operationCount = 0;
+        pass = 0;
+        index = 0;
+        swapped = false;
     }
 
     @Override
